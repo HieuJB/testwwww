@@ -1,7 +1,8 @@
 <template>
-   <NuxtLayout :name="'default'">
-    <NuxtPage />
-  </NuxtLayout>
+  <div>
+    dsadsadsasad1111111111
+    <slot/>dsa
+  </div>
 </template>
 
 <script setup>
