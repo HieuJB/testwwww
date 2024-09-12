@@ -1,10 +1,10 @@
 <template>
-  <div>dsads
+  <div>dsads1
     <div v-if="$isMobile">
-      Mobile
+      Mobile1
     </div>
     <div v-if="!$isMobile">
-      PC
+      PC1
     </div>
   </div>
 </template>
