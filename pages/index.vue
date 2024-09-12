@@ -17,7 +17,7 @@ const { $isBot, $isMobile, $header } = useNuxtApp()
 
 const {data} = await useAsyncData('config', async () => {
   
-  const resData = await useFetch('http://trunghieuit.click/api/time')
+  const resData = await useFetch('https://trunghieuit.click/api/time')
   return {
    resData: resData.data.value,
   }
