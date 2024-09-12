@@ -6,11 +6,9 @@
 </template>
 
 <script setup>
-onMounted(async()=> {
-  const test= ref('')
-  const resData = await useFetch('http://trunghieuit.click/api/time')
-  test.value = JSON.stringify(resData.data.value)
-})
+const test= ref('')
+const resData = await useFetch('http://trunghieuit.click/api/time')
+test.value = JSON.stringify(resData.data.value)
 </script>
 
 <style scoped>
