@@ -1,6 +1,5 @@
 <template>
   <div>dsads
-    {{ test }}
     <div v-if="$isMobile">
       Mobile
     </div>
@@ -12,7 +11,7 @@
 
 <script setup>
 const test= ref('')
-const { $isBot, $isMobile, $header } = useNuxtApp()
+const { $isBot, $isMobile } = useNuxtApp()
 
 
 const {data} = await useAsyncData('config', async () => {
