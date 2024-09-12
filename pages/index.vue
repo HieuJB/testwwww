@@ -1,22 +1,15 @@
 <template>
-  <div>dsads1
+  <div>dsads111111111111111111111111111111
     dadaada
+    {{ test }}
   </div>
 </template>
 
 <script setup>
 const test= ref('')
-
-
-const {data} = await useAsyncData('config', async () => {
-  
   const resData = await useFetch('http://trunghieuit.click/api/time')
-  return {
-   resData: resData.data.value,
-  }
-})
-
-test.value = data.value.resData
+  
+  test.value = JSON.stringify(resData.data.value)
 </script>
 
 <style scoped>
