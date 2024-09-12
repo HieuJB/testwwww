@@ -17,13 +17,16 @@ const { $isBot, $isMobile, $header } = useNuxtApp()
 
 const {data} = await useAsyncData('config', async () => {
   
-  const resData = await useFetch('https://trunghieuit.click/api/time')
+  const resData = await useFetch('https://bongdalu61.com/oapi/v1/configurations')
   return {
-   resData: resData.data.value,
+    resData: resData.data.value.configurations
   }
 })
 
-test.value = data.value.resData
+setTimeout(() => {
+    console.log(data,'================');
+    
+}, 2000);
 </script>
 
 <style scoped>
