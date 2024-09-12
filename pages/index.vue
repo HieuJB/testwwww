@@ -1,14 +1,29 @@
 <template>
-  <div>dsads111111111111111111111111111111
-    dadaada
+  <div>dsads111
     {{ test }}
+    <div v-if="$isMobile">
+      Mobile
+    </div>
+    <div v-if="!$isMobile">
+      PC
+    </div>
   </div>
 </template>
 
 <script setup>
 const test= ref('')
-const resData = await useFetch('http://trunghieuit.click/api/time')
-test.value = JSON.stringify(resData.data.value)
+const { $isBot, $isMobile, $header } = useNuxtApp()
+
+
+const {data} = await useAsyncData('config', async () => {
+  
+  const resData = await useFetch('http://trunghieuit.click/api/time')
+  return {
+   resData: resData.data.value,
+  }
+})
+
+test.value = data.value.resData
 </script>
 
 <style scoped>
