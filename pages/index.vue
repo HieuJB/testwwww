@@ -1,17 +1,11 @@
 <template>
   <div>dsads1
-    <div v-if="$isMobile">
-      Mobile1
-    </div>
-    <div v-if="!$isMobile">
-      PC1
-    </div>
+    dadaada
   </div>
 </template>
 
 <script setup>
 const test= ref('')
-const { $isBot, $isMobile } = useNuxtApp()
 
 
 const {data} = await useAsyncData('config', async () => {
