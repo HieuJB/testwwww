@@ -1,1 +1,0 @@
-import{b as m,bv as e,bV as f}from"./DWGr-Zqp.js";const j=(c,r)=>m(()=>{if(!(r!=null&&r.query))return e(c);const a=e(c),t=e(r==null?void 0:r.query),u=Object.fromEntries(Object.entries(t).map(([b,y])=>[b,e(y)]));return`${a}${u?`?${f(u)}`:""}`});export{j as c};
