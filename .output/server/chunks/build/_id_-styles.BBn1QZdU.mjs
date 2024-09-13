@@ -1,0 +1,6 @@
+const _id__vue_vue_type_style_index_0_scoped_c1b607fc_lang = '[data-v-c1b607fc]  .skeleton td{background-color:#e6e6e6!important;color:#e6e6e6!important;min-height:30px!important;overflow:hidden;position:relative}[data-v-c1b607fc]  .skeleton td a{display:none}[data-v-c1b607fc]  .skeleton th{height:46px}[data-v-c1b607fc]  .skeleton .season__list{display:none!important}[data-v-c1b607fc]  .skeleton td:before{animation:loading-c1b607fc 1.5s infinite;background:linear-gradient(90deg,hsla(0,0%,100%,0),hsla(0,0%,100%,.5) 50%,hsla(0,0%,100%,0))!important;content:"";display:block;height:100%;left:0;position:absolute;top:0;width:100%}@keyframes loading-c1b607fc{0%{transform:translateX(-100%)}to{transform:translateX(100%)}}[data-v-c1b607fc]  .v-enter-active,[data-v-c1b607fc]  .v-leave-active{transition:opacity .5s ease}[data-v-c1b607fc]  .v-enter-from,[data-v-c1b607fc]  .v-leave-to{opacity:0}.team[data-v-c1b607fc]{border-radius:6px;min-height:70vh;padding:10px}@media (max-width:768px){.team[data-v-c1b607fc]{padding:8px}}';
+
+const _id_Styles_BBn1QZdU = [_id__vue_vue_type_style_index_0_scoped_c1b607fc_lang];
+
+export { _id_Styles_BBn1QZdU as default };
+//# sourceMappingURL=_id_-styles.BBn1QZdU.mjs.map
