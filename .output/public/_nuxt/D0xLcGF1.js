@@ -1,0 +1,1 @@
+import{bW as t}from"./CnJNAMZb.js";const o=t("systems",{state:()=>({accessToken:"",accessTokenOA2:"",userData:[],configurations:[],keywordSearch:"",wsSocket:[],breadCrumbNav:[],title:"",optionIframe:""}),actions:{updateTitle(e){this.title=e},updateoptionIframe(e){this.optionIframe=e}}});export{o as s};
