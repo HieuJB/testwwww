@@ -1,0 +1,9 @@
+{
+  "name": "My Push Notification App",
+  "short_name": "Push App",
+  "description": "A sample app with Push Notifications",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#317EFB"
+}

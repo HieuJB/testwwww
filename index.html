@@ -4,13 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Push Notifications Example</title>
+  <!-- Chỉ giữ phần manifest.json, không cần icons -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#317EFB">
 </head>
 <body>
-  <h1>Push Notifications Example</h1>
+  <h1>Push Notifications Example with PWA</h1>
   <button id="subscribeBtn">Subscribe to Push Notifications</button>
   <button id="sendBtn">Send Test Notification</button>
 
   <script>
+    // Tương tự, không cần ảnh icon cho thông báo nếu chưa sẵn sàng
     const VAPID_PUBLIC_KEY = 'BIW-fd8gsZvkjU0AEnm5AtdSNox2a6NpXlS7zPqY5Oumyxa53Mro48Up22MlxRGqLg_A0ScH_ZRztisfWD1lB9M';
 
     document.getElementById('subscribeBtn').addEventListener('click', async () => {
@@ -20,17 +24,14 @@
       }
 
       try {
-        // Đăng ký Service Worker
         const registration = await navigator.serviceWorker.register('/serviceworker.js');
         console.log('Service Worker registered with scope:', registration.scope);
 
-        // Đăng ký Push Notifications
         const subscription = await registration.pushManager.subscribe({
           userVisibleOnly: true,
           applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY)
         });
 
-        // Gửi thông tin đăng ký về server
         await fetch('/subscribe', {
           method: 'POST',
           body: JSON.stringify(subscription),
@@ -40,26 +41,12 @@
         });
 
         alert('Subscribed to Push Notifications');
+
+        // Bắt đầu gửi thông báo cứ sau mỗi 10 giây
+        startSendingNotifications();
       } catch (error) {
         console.error('Failed to subscribe to Push Notifications', error);
       }
-    });
-
-    document.getElementById('sendBtn').addEventListener('click', async () => {
-      // Gửi yêu cầu gửi thông báo từ server
-      await fetch('/send-notification', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          title: 'Hello from Web Push!',
-          body: 'This is a test notification.',
-          icon: '/path-to-icon.png',
-          url: 'https://your-url.com'
-        })
-      });
-      alert('Test notification sent');
     });
 
     function urlBase64ToUint8Array(base64String) {
@@ -71,6 +58,35 @@
         outputArray[i] = rawData.charCodeAt(i);
       }
       return outputArray;
+    }
+
+    // Hàm bắt đầu gửi thông báo cứ sau mỗi 10 giây
+    function startSendingNotifications() {
+      setInterval(async () => {
+        await fetch('/send-notification', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            title: 'Scheduled Notification',
+            body: 'This is a scheduled notification sent every 10 seconds.',
+            url: 'https://your-url.com'  // Bạn có thể thêm URL hoặc dữ liệu tùy chỉnh
+          })
+        });
+        console.log('Notification sent');
+      }, 10000);  // Mỗi 10 giây (10000ms) sẽ gửi một thông báo
+    }
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/serviceworker.js')
+          .then(registration => {
+            console.log('Service Worker registered with scope:', registration.scope);
+          }).catch(err => {
+            console.error('Service Worker registration failed:', err);
+          });
+      });
     }
   </script>
 </body>

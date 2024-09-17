@@ -30,7 +30,7 @@ app.post('/send-notification', (req, res) => {
   const notificationPayload = JSON.stringify({
     title: req.body.title,
     body: req.body.body,
-    icon: req.body.icon,
+    icon: req.body.icon || '/default-icon.png',  // Nếu có icon mặc định
     url: req.body.url
   });
 
