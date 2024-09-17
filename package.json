@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@nuxtjs/pwa": "^3.3.5",
+    "@vite-pwa/nuxt": "^0.10.5",
     "nuxt": "^3.13.0",
     "vue": "latest",
     "vue-router": "latest"
