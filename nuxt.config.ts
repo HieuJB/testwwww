@@ -28,5 +28,10 @@ export default defineNuxtConfig({
       clientsClaim: true, // Lấy quyền kiểm soát tất cả các tab
       skipWaiting: true // Kích hoạt ngay lập tức khi Service Worker mới được cài đặt
     }
+  },
+  head: {
+    link: [
+      { rel: 'manifest', href: '/manifest.webmanifest' } // Đảm bảo manifest được liên kết trong <head>
+    ]
   }
 })
