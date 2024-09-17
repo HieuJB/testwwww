@@ -1,1 +1,0 @@
-import{o as n}from"./R54-JUvW.js";const a={__name:"index",setup(o){return n(()=>{"serviceWorker"in navigator&&navigator.serviceWorker.ready.then(function(e){setTimeout(()=>{e.showNotification("Thông báo",{body:"Thời gian hiện tại: "+new Date().toLocaleTimeString(),icon:"/icon.png"})},1e4)})}),(e,i)=>" dsadsadsadass "}};export{a as default};

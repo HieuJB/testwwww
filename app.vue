@@ -1,18 +1,32 @@
 <template>
-   <NuxtLayout :name="'default'">
-    <NuxtPage />
-  </NuxtLayout>
+  <div class="center">
+    <h1>Nuxt3 PWA</h1>
+    <!-- TODO waiting for https://github.com/nuxt/framework/pull/2262 -->
+    <img :src="'/pwa.jpg'" alt="Nuxt3 PWA">
+    <p>
+      This page can be displayed offline !
+    </p>
+  </div>
 </template>
 
-<script setup>
-if (process.client && 'serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js').then(function(reg) {
-    console.log('Service Worker Registered');
-  });
+<script>
+if (process.client) {
+  window.addEventListener('load', () => {
+    if (!('serviceWorker' in navigator)) {
+      throw new Error('serviceWorker is not supported in current browser!')
+    }
+
+    navigator.serviceWorker.register('/sw.js')
+  })
 }
 </script>
 
-
-<style lang="scss" scoped>
-
+<style>
+.center {
+  text-align: center;
+}
+img {
+  width: 100%;
+  max-width: 760px;
+}
 </style>
