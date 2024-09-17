@@ -9,7 +9,7 @@
   </div>
 </template>
 
-<script>
+<script scipt>
 if (process.client) {
   window.addEventListener('load', () => {
     if (!('serviceWorker' in navigator)) {
@@ -19,6 +19,17 @@ if (process.client) {
     navigator.serviceWorker.register('/sw.js')
   })
 }
+
+onMounted(() => {
+  // Yêu cầu quyền thông báo
+  Notification.requestPermission().then(permission => {
+    if (permission === 'granted') {
+      console.log('Permission granted for notifications.');
+    } else {
+      console.log('Permission denied for notifications.');
+    }
+  });
+});
 </script>
 
 <style>
