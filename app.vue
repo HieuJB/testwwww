@@ -4,12 +4,12 @@
     <!-- TODO waiting for https://github.com/nuxt/framework/pull/2262 -->
     <img :src="'/pwa.jpg'" alt="Nuxt3 PWA">
     <p>
-      This page can be displayed offline !
+      This page can be displayed offline1 !
     </p>
   </div>
 </template>
 
-<script scipt>
+<script setup>
 if (process.client) {
   window.addEventListener('load', () => {
     if (!('serviceWorker' in navigator)) {
@@ -21,6 +21,8 @@ if (process.client) {
 }
 
 onMounted(() => {
+  console.log('==dsasdsads');
+  
   // Yêu cầu quyền thông báo
   Notification.requestPermission().then(permission => {
     if (permission === 'granted') {
