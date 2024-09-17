@@ -24,9 +24,9 @@ onMounted(() => {
   // Yêu cầu quyền thông báo
   Notification.requestPermission().then(permission => {
     if (permission === 'granted') {
-      console.log('Permission granted for notifications.');
+      alert('Permission granted for notifications.');
     } else {
-      console.log('Permission denied for notifications.');
+      alert('Permission denied for notifications.');
     }
   });
 });
