@@ -1,6 +1,0 @@
-const index_vue_vue_type_style_index_0_scoped_281db55c_lang = ".table__title[data-v-281db55c]{align-items:center;background:#43951e;color:#fff;display:flex;font-size:12px;font-weight:700;justify-content:center;min-height:30px;text-align:center}.table table[data-v-281db55c]{border-collapse:collapse;min-width:700px;width:100%}.table td[data-v-281db55c],.table th[data-v-281db55c]{border:1px solid #ddd;padding:8px;text-align:center}.table tr th[data-v-281db55c]{background-color:#e6e6e6;color:#666;padding:0 2px}.table td[data-v-281db55c]:nth-child(9){background-color:#fbeee9}.table td[data-v-281db55c]:nth-child(10){background-color:#fdf4e0}.table td[data-v-281db55c]:nth-child(11),.table td[data-v-281db55c]:nth-child(12){background-color:#f3fdea}.table td[data-v-281db55c]:nth-child(13),.table td[data-v-281db55c]:nth-child(14){background-color:#f0f8fd}.table td[data-v-281db55c]:nth-child(15){background-color:#ffffe7}.table .bg-gray[data-v-281db55c]{background-color:hsla(0,0%,90%,.459)}.skeleton th[data-v-281db55c]{height:unset!important;padding:2px!important}.skeleton td[data-v-281db55c]{height:35px;padding:12px!important}";
-
-const indexStyles_DQmKQcRR = [index_vue_vue_type_style_index_0_scoped_281db55c_lang];
-
-export { indexStyles_DQmKQcRR as default };
-//# sourceMappingURL=index-styles.DQmKQcRR.mjs.map

@@ -1,32 +1,22 @@
 <template>
-  <div>dsads111
-    {{ test }}
-    <div v-if="$isMobile">
-      Mobile
-    </div>
-    <div v-if="!$isMobile">
-      PC
-    </div>
-  </div>
+  dsadsadsadass
 </template>
 
 <script setup>
-const test= ref('')
-const { $isBot, $isMobile, $header } = useNuxtApp()
 
 
-const {data} = await useAsyncData('config', async () => {
-  
-  const resData = await useFetch('https://bongdalu61.com/oapi/v1/configurations')
-  return {
-    resData: resData.data.value.configurations
+onMounted(() => {
+  if (process.client && 'serviceWorker' in navigator) {
+    navigator.serviceWorker.ready.then(function (reg) {
+      setTimeout(() => {
+        reg.showNotification('Thông báo', {
+          body: 'Thời gian hiện tại: ' + new Date().toLocaleTimeString(),
+          icon: '/icon.png',
+        });
+      }, 10000); // 10 giây
+    });
   }
-})
-
-setTimeout(() => {
-    console.log(data,'================');
-    
-}, 2000);
+});
 </script>
 
 <style scoped>

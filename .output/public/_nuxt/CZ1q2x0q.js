@@ -1,1 +1,0 @@
-import{d as e,N as t,t as s,o as n,c as o}from"./CnJNAMZb.js";const _=e({__name:"index",setup(a){return t({statusCode:404,statusMessage:"Trận đấu không tồn tại!"}),s(async()=>{}),(r,c)=>(n(),o("div"))}});export{_ as default};

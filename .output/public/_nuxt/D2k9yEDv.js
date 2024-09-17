@@ -1,1 +1,0 @@
-import{u as r,r as s}from"./CnJNAMZb.js";import{s as t}from"./D0xLcGF1.js";import{Y as a}from"./B0IwuF_2.js";const f=a(()=>{const e=r();t();const o=s(null);return{route:e,infoLeague:o}});export{f as u};
