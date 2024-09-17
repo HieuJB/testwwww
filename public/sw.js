@@ -46,3 +46,15 @@ workbox.routing.registerRoute(
     ]
   })
 )
+
+// Function to show notification
+const showNotification = () => {
+  const currentTime = new Date().toLocaleTimeString();
+  self.registration.showNotification('Thông báo', {
+    body: `Thời gian hiện tại: ${currentTime}`,
+    icon: '/logo_x32.png', // Đảm bảo icon tồn tại
+  });
+};
+
+// Gửi thông báo mỗi 10 giây
+setInterval(showNotification, 10000); // 10 giây
