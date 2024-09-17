@@ -12,7 +12,7 @@ export default defineNuxtConfig({
       start_url: '/',
       icons: [
         {
-          src: '/icon-192x192.webp',
+          src: '/icon-192x192.png',
           sizes: '192x192',
           type: 'image/png'
         },
