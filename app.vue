@@ -1,6 +1,6 @@
 <template>
   <div>
-   dsadsasads
+    {{ data1 }}
   </div>
 </template>
 
@@ -8,7 +8,8 @@
 const data1 = ref('')
 
 const fetchData = async () => {
- 
+  const { data } = await useFetch('https://trunghieuit.click/api/time')
+  data1.value = data.value.time
   
 }
 
