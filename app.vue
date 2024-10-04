@@ -1,6 +1,6 @@
 <template>
   <div>
-    {{ data1 }}
+   sdadsadasasdsda
   </div>
 </template>
 
