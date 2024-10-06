@@ -1,19 +1,13 @@
 <template>
-  <div>
-   sdadsadasasdsda
+  <div>/
+  123123122222
+   sdadsadasasdsdadsadadasewqewqwqeqwewqewweqwewqsdassdsadsadsads2312312312weqweqwewweqewqqew
   </div>
 </template>
 
 <script setup>
-const data1 = ref('')
 
-const fetchData = async () => {
-  const { data } = await useFetch('https://trunghieuit.click/api/time')
-  data1.value = data.value.time
-  
-}
 
-await fetchData()
 
 
 </script>
