@@ -609,7 +609,7 @@ const fetchConfigurations = (resData) => {
     jsUrlCodeHeader.value = parseJsList(getConfig('js_url_header') || '')
     embedCodeBody.value = getConfig('embed_code_body') || '';
     embedCodeFooter.value = getConfig('embed_code_footer') || '';
-    initConfigScriptMeta()
+    // initConfigScriptMeta()
   } catch (e) {
     console.log(e)
   }
