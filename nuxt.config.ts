@@ -43,13 +43,13 @@ export default defineNuxtConfig({
     head: {
       charset: "utf-8",
       viewport: "width=device-width, initial-scale=1",
-      script: [
-        {
-          src: "https://stats.ultraffic.info/js/script.js?ver=1.0.1",
-          type: "text/javascript",
-          defer: true
-        },
-      ],
+      // script: [
+      //   {
+      //     src: "https://stats.ultraffic.info/js/script.js?ver=1.0.1",
+      //     type: "text/javascript",
+      //     defer: true
+      //   },
+      // ],
     },
   },
   modules: [
