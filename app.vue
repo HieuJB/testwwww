@@ -1,10 +1,9 @@
 <template>
-  <!-- <NuxtLoadingIndicator :color="'#FF8C00'"/>
+  <NuxtLoadingIndicator :color="'#FF8C00'"/>
   <NuxtLayout :name="'default'">
     <NuxtPage />
   </NuxtLayout>
-  <NuxtSnackbar /> -->
-  app Init
+  <NuxtSnackbar />
 </template>
 
 <script setup lang="ts">
