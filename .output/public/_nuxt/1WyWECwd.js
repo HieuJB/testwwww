@@ -1,1 +1,0 @@
-import{N as a,bL as o,c_ as t,az as n,o as c,c as r}from"./C0DZl7YE.js";const d=a({__name:"index",setup(u){const{useLocale:i,$t:e,isNavVisible:s}=o();return s.value=!1,t({statusCode:404,statusMessage:e("The match does not exist!")}),n(async()=>{}),(m,_)=>(c(),r("div"))}});export{d as default};
