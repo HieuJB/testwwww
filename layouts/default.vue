@@ -768,10 +768,17 @@ const wssMatch = async() => {
 
 const fetchConfig = async() => {
     try {
-      const resData = await useFetch<any>(API_ROUTERS.CONFIGURATIONS); 
-      if(resData?.data?.value?.configurations) {
-        fetchConfigurations(resData.data.value.configurations)
-      }
+      // console.time("Time")
+      const startTime = performance.now()
+      // const resData = await useFetch<any>(API_ROUTERS.CONFIGURATIONS); 
+      // if(resData?.data?.value?.configurations) {
+        // console.log(resData?.data?.value?.configurations);
+        
+        fetchConfigurations(CONFIG)
+      // }
+      const endTime = performance.now()
+      console.log(endTime-startTime);
+      
     } catch (e) {
       console.log(e)
     }
