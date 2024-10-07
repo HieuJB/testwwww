@@ -32,15 +32,15 @@ export const useDefault = () => {
       ]
     });
    
-      onMounted(async()=> {
-        if ('requestIdleCallback' in window) {
-          await lazyLoadStyle();
-        } else {
-          setTimeout(async() => {
-            await lazyLoadStyle()
-          }, 0);
-        }
-      })
+      // onMounted(async()=> {
+      //   if ('requestIdleCallback' in window) {
+      //     await lazyLoadStyle();
+      //   } else {
+      //     setTimeout(async() => {
+      //       await lazyLoadStyle()
+      //     }, 0);
+      //   }
+      // })
   }
 
   const setColorDynamic = (item: string) => {
