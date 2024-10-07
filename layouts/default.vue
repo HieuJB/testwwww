@@ -5,6 +5,9 @@
 
 
 
+
+
+
   <div id="header-wrapper" v-if="route.query.mode !== 'iframe' && !iddHideIframe">
     <div id="top">
       <div class="top container">
