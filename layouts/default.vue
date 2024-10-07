@@ -777,7 +777,7 @@ const fetchConfig = async() => {
         fetchConfigurations(CONFIG)
       // }
       const endTime = performance.now()
-      console.log(endTime-startTime,'===');
+      console.log(endTime-startTime,'===222');
       
     } catch (e) {
       console.log(e)
