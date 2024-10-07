@@ -1,5 +1,5 @@
 import { defineNuxtConfig } from "nuxt/config";
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+// const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 
 export default defineNuxtConfig({
   // routeRules: {
@@ -170,40 +170,40 @@ export default defineNuxtConfig({
     }
   },
   */
-  webpack: {
-    loaders: {
-      vue: {
-        hotReload: true,
-      }
-    },
-    extractCSS: true,
-    optimization: {
-      splitChunks: {
-        maxSize: 300000,
-        cacheGroups: {
-          styles: {
-            name: 'styles',
-            test: /\.(css|vue)$/,
-            chunks: 'all',
-            enforce: true
-          }
-        }
-      },
-      minimize: true,
-      minimizer: [
-        new CssMinimizerPlugin({
-          minimizerOptions: {
-            level: {
-              1: {
-                roundingPrecision: "all=3,px=5",
-              },
-            },
-          },
-          minify: CssMinimizerPlugin.cleanCssMinify,
-        }),
-      ],
-    },
-  },
+  // webpack: {
+  //   loaders: {
+  //     vue: {
+  //       hotReload: true,
+  //     }
+  //   },
+  //   extractCSS: true,
+  //   optimization: {
+  //     splitChunks: {
+  //       maxSize: 300000,
+  //       cacheGroups: {
+  //         styles: {
+  //           name: 'styles',
+  //           test: /\.(css|vue)$/,
+  //           chunks: 'all',
+  //           enforce: true
+  //         }
+  //       }
+  //     },
+  //     minimize: true,
+  //     minimizer: [
+  //       new CssMinimizerPlugin({
+  //         minimizerOptions: {
+  //           level: {
+  //             1: {
+  //               roundingPrecision: "all=3,px=5",
+  //             },
+  //           },
+  //         },
+  //         minify: CssMinimizerPlugin.cleanCssMinify,
+  //       }),
+  //     ],
+  //   },
+  // },
   runtimeConfig: {
     apiBaseUrl: import.meta.env.NUXT_API_BASE_URL ?? 'https://bdl-api-dev.scl-dev.com',
     brandCode: import.meta.env.NUXT_BRAND_CODE ?? '19006505',

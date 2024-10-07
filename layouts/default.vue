@@ -823,48 +823,48 @@ const setLanguage = () => {
     })
   }
 }
-onMounted(async () => {
-  if (error.value) {
-    setTimeout(async()=> {
-      const resData = await useFetch<any>(API_ROUTERS.CONFIGURATIONS); 
-      if(resData?.data?.value?.configurations) {
-        fetchConfigurations(resData.data.value.configurations)
-      }
+// onMounted(async () => {
+//   if (error.value) {
+//     setTimeout(async()=> {
+//       const resData = await useFetch<any>(API_ROUTERS.CONFIGURATIONS); 
+//       if(resData?.data?.value?.configurations) {
+//         fetchConfigurations(resData.data.value.configurations)
+//       }
 
-      await fetchLanguages()
-    })
-  }
-  if ('requestIdleCallback' in window) {
-    // setTimeout(()=> {
-    //   fetchMenus()
-    // },0)
-    userData.value = useCookie('userData')?.value
-    accessToken.value = useCookie('accessToken')?.value
-    isLoggedIn.value = accessToken?.value ? true : false
-    userName.value = userData?.value?.nick_name
-    avatarUserLogin.value = userData?.value?.avatar
-    setLanguage()
-    wssInit()
-    wssMatch()
-    document.addEventListener('click', handleClickOutside);
+//       await fetchLanguages()
+//     })
+//   }
+//   if ('requestIdleCallback' in window) {
+//     // setTimeout(()=> {
+//     //   fetchMenus()
+//     // },0)
+//     userData.value = useCookie('userData')?.value
+//     accessToken.value = useCookie('accessToken')?.value
+//     isLoggedIn.value = accessToken?.value ? true : false
+//     userName.value = userData?.value?.nick_name
+//     avatarUserLogin.value = userData?.value?.avatar
+//     setLanguage()
+//     wssInit()
+//     wssMatch()
+//     document.addEventListener('click', handleClickOutside);
 
-  } else {
-    setTimeout(async() => {
-      // fetchMenus()
+//   } else {
+//     setTimeout(async() => {
+//       // fetchMenus()
 
-      userData.value = useCookie('userData')?.value
-      accessToken.value = useCookie('accessToken')?.value
-      isLoggedIn.value = accessToken?.value ? true : false
-      userName.value = userData?.value?.nick_name
-      avatarUserLogin.value = userData?.value?.avatar
+//       userData.value = useCookie('userData')?.value
+//       accessToken.value = useCookie('accessToken')?.value
+//       isLoggedIn.value = accessToken?.value ? true : false
+//       userName.value = userData?.value?.nick_name
+//       avatarUserLogin.value = userData?.value?.avatar
 
-      setLanguage()
-      wssInit()
-      wssMatch()
-      document.addEventListener('click', handleClickOutside);
-    }, 0);
-  }
-});
+//       setLanguage()
+//       wssInit()
+//       wssMatch()
+//       document.addEventListener('click', handleClickOutside);
+//     }, 0);
+//   }
+// });
 </script>
 
 <style lang="scss">
