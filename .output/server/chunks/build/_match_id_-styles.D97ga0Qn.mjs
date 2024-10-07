@@ -1,6 +1,0 @@
-const _match_id__vue_vue_type_style_index_0_scoped_4c2b633a_lang = '.product-selector span[data-v-4c2b633a]{background:#e6e6e6!important;color:#333}.product-selector .active[data-v-4c2b633a]{font-weight:600;position:relative;z-index:1}.product-selector .active div[data-v-4c2b633a]{z-index:2}.product-selector .active[data-v-4c2b633a]:before{background:#fff!important;border-radius:4px;box-shadow:0 7px 29px 0 hsla(240,5%,41%,.2);content:"";inset:2px;position:absolute;z-index:0}.col-4.col-md-4.col-lg-4.text-center.align-self-center[data-v-4c2b633a]{color:#333}.col-4.col-md-4.col-lg-4.text-center.align-self-center[data-v-4c2b633a]:nth-of-type(2){color:rgba(13,110,253,.74)}.col-6.col-md-6.col-lg-6.text-center.align-self-center.plr-0:first-of-type .row.mlr-0[data-v-4c2b633a]{background-color:rgba(173,255,47,.078)}.col-12.text-center.align-self-center.bdtable.bg_header1[data-v-4c2b633a]{background:var(--primary,#006400);color:#fff}.col-6.col-md-6.col-lg-6.text-center.align-self-center.red_number[data-v-4c2b633a]{background:hsla(0,0%,100%,.812)}';
-
-const _match_id_Styles_D97ga0Qn = [_match_id__vue_vue_type_style_index_0_scoped_4c2b633a_lang];
-
-export { _match_id_Styles_D97ga0Qn as default };
-//# sourceMappingURL=_match_id_-styles.D97ga0Qn.mjs.map

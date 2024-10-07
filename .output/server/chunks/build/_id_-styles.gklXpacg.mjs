@@ -1,6 +1,0 @@
-const _id__vue_vue_type_style_index_0_scoped_ca85c17b_lang = '[data-v-ca85c17b]  .skeleton td{background-color:#e6e6e6!important;color:#e6e6e6!important;min-height:30px!important;overflow:hidden;position:relative}[data-v-ca85c17b]  .skeleton td a{display:none}[data-v-ca85c17b]  .skeleton th{height:46px}[data-v-ca85c17b]  .skeleton .season__list{display:none!important}[data-v-ca85c17b]  .skeleton td:before{animation:loading-ca85c17b 1.5s infinite;background:linear-gradient(90deg,hsla(0,0%,100%,0),hsla(0,0%,100%,.5) 50%,hsla(0,0%,100%,0))!important;content:"";display:block;height:100%;left:0;position:absolute;top:0;width:100%}@keyframes loading-ca85c17b{0%{transform:translateX(-100%)}to{transform:translateX(100%)}}[data-v-ca85c17b]  .v-enter-active,[data-v-ca85c17b]  .v-leave-active{transition:opacity .5s ease}[data-v-ca85c17b]  .v-enter-from,[data-v-ca85c17b]  .v-leave-to{opacity:0}.team[data-v-ca85c17b]{border-radius:6px;min-height:70vh;padding:10px}@media (max-width:768px){.team[data-v-ca85c17b]{padding:8px}}';
-
-const _id_Styles_gklXpacg = [_id__vue_vue_type_style_index_0_scoped_ca85c17b_lang];
-
-export { _id_Styles_gklXpacg as default };
-//# sourceMappingURL=_id_-styles.gklXpacg.mjs.map
