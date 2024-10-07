@@ -192,7 +192,7 @@
     <LazyBreadcrumbs v-if="!isHomePage && !error && route.query.mode !== 'iframe' && !iddHideIframe && !route?.params?.slug && ![$trouter(ROUTERS.FOOTBALL_FAVORITES), $trouter(ROUTERS.FOOTBALL_RESULT), $trouter(ROUTERS.FOOTBALL_SCHEDULE), $trouter(ROUTERS.NEWS)].includes(route.path) && !route.path.includes(ROUTERS_OLD.MATCH_DETAIL) && !route.path.includes(ROUTERS_OLD.NEWS_TAG)"/>
   </div>
 
-  <slot />
+  <!-- <slot />
 
   <LazyHydrationWrapper :when-triggered="$isloadScripts">
     <footer id="bottom" v-if="route.query.mode !== 'iframe' && !iddHideIframe">
@@ -220,7 +220,7 @@
 
   <LazyModalRegister @openModalRegister="openModalRegister" @openModalLogin="openModalLogin" v-if="isInitModalRegister"/>
 
-  <LazyModalSearch v-if="isInitModalSearch"/>
+  <LazyModalSearch v-if="isInitModalSearch"/> -->
 
 </template>
 <script setup lang="ts">
