@@ -5,5 +5,5 @@
 // import NEWS from '@/components/news/index.vue';
 
 export default defineNuxtPlugin(async (nuxtApp) => {
-  console.log('dsadsasd')
+  console.log('dsadsasd1111111111')
 });
