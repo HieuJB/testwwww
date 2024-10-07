@@ -1,15 +1,12 @@
 <template>
-  <div>11107/10/2024swqeqweadasdasdaaaaaaaaaaaaa
-  </div>
+  <NuxtLoadingIndicator :color="'#FF8C00'"/>
+  <NuxtLayout :name="'default'">
+    <NuxtPage />
+  </NuxtLayout>
+  <NuxtSnackbar />
 </template>
 
-<script setup>
-
-
-
-
+<script setup lang="ts">
 </script>
-
-<style lang="scss" scoped>
-
+<style>
 </style>

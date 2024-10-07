@@ -1,0 +1,907 @@
+#warehouse-screen {
+  border-radius: 4px;
+  padding: 0 10px;
+  a:link, a:visited {
+    font-size: 11px;
+    text-decoration: none;
+    color: #333333;
+  }
+  #info {
+    background: #fff;
+    padding: 10px !important;
+    border-radius: 4px;
+    clear: both;
+    margin: 0 auto;
+    overflow: hidden;
+    border: none;
+
+    .Area ul {
+      border-bottom: 3px solid $secondary;
+      margin-bottom: 15px;
+      line-height: 35px;
+      height: 35px;
+      padding-left: 0;
+      width: 100%;
+    }
+    .Area li {
+      float: left;
+      position: relative;
+      cursor: pointer;
+    }
+    .Area li span {
+      line-height: 35px;
+      display: block;
+      float: left;
+      text-align: center;
+      color: #666;
+      padding: 0 30px;
+      font-size: 15px;
+      font-weight: bold;
+      border-radius: 3px 3px 0 0;
+    }
+    .Area li span:hover {
+      color: #F60;
+      text-decoration: none;
+    }
+    .Area .Area-selected span,
+    .Area .Area-selected span:visited,
+    .Area .Area-selected span:hover {
+      background-color: $secondary;
+      color: #FFF;
+    }
+    .Area-unselected {
+      text-decoration: none;
+    }
+    .Area .Area-selected span,
+    .Area .Area-selected span:visited,
+    .Area .Area-selected span:hover,
+    .nav_quick #search_btn,
+    .inner_ul li span:hover {
+      background-color: $secondary;
+    }
+    .Area ul,
+    .inner_ul,
+    .sub_menu {
+      border-color: $secondary;
+    }
+
+    .nav_quick {
+      padding-left: 10px;
+      margin-bottom: 10px;
+      a {
+        display: inline-block;
+        padding: 4px 6px;
+        line-height: 24px;
+        text-decoration: underline;
+      }
+    }
+
+    #allSclassList {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    .divList {
+      float: left;
+      display: block;
+      width: calc((100% - 126px) / 9);
+      text-align: center;
+      margin: 8px 7px;
+      background-color: #fff;
+      z-index: 1;
+      border: 1px solid #e5e5e5;
+      box-shadow: 1px 2px 0 #f0f0f0;
+      height: 129px;
+      cursor: pointer;
+    }
+    .div_inner_top {
+      position: relative;
+      display: flex;
+      height: 100px;
+      z-index: 1;
+      justify-content: center;
+      align-items: center;
+    }
+    .divList:hover, .divList_hover {
+      background-color: #FFFBEA;
+      border: 1px solid #ffe175;
+    }
+    .divList:hover .div_inner_bottom,
+    .divList:hover .div_inner_bottom:after,
+    .divList_hover .div_inner_bottom,
+    .divList_hover .div_inner_bottom:after {
+      background-color: #ffe175;
+      color: #ad6212;
+      border-top-color: #ad6212;
+    }
+    .div_inner_top_img {
+      position: relative;
+      top: 10px;
+      border: 0px;
+      border-color: #999;
+      max-height: 88px;
+      max-width: 88px;
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: scale-down;
+      -o-object-position: center;
+      object-position: center;
+    }
+    .div_inner_bottom {
+      display: block;
+      top: 110px;
+      height: 29px;
+      z-index: 1;
+      text-align: center;
+      padding-left: 2px;
+      color: #555;
+      background-color: #F8F8F8;
+      overflow: hidden;
+    }
+    .div_inner_bottom:after {
+      width: 0;
+      height: 0;
+      content: "";
+      border: 4px solid transparent;
+      border-top-color: #999;
+      vertical-align: -10px;
+      margin-left: 5px;
+    }
+    .div_inner_bottom_span {
+      position: relative;
+      text-align: center;
+      font-size: 12px;
+      z-index: 1;
+      line-height: 29px;
+      width: 100%;
+    }
+    .floatDiv {
+      z-index: 3;
+      width: auto;
+    }
+    
+    .ulDiv {
+      display: block;
+      position: absolute;
+      float: left;
+      z-index: 5;
+      left: -5px !important;
+    }
+    .div_inner_bottom_span_ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      position: absolute;
+      margin: 0px;
+      background-color: #FFF;
+      width:  445px;
+      border: 1px solid #e5e5e5;
+      padding: 20px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+      top: 7px;
+    }
+    .div_inner_bottom_span_ul li.data-league {
+      list-style-type: none;
+      line-height: 26px;
+      width: 100px;
+      float: left;
+      font-size: 14px;
+      position: relative;
+      display: -webkit-box !important;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .div_inner_bottom_span_ul li.no-data {
+      list-style-type: none;
+      line-height: 26px;
+      float: left;
+      font-size: 12px;
+      position: relative;
+    }
+    .div_inner_bottom_span_ul li:hover {
+      background-color: #e6f7da;
+    }
+    .div_inner_bottom_span_ul li a {
+      color: #666;
+      padding-left: 5px;
+      display: block;
+      font-size: 12px;
+    }
+    .div_inner_bottom_span_ul li a:hover {
+      color: #FF5106;
+      text-decoration: none;
+    }
+    
+    .div_inner_bottom_span_ul:before {
+      content: "";
+      display: inline-block;
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: -16px;
+      left: 43px;
+      // border: 8px solid transparent;
+      // border-bottom-color: #FFF;
+    }
+    .spDiv ul {
+      right: -103px !important;
+    }
+    .spDiv ul:before {
+      right: 43px !important;
+      left: auto;
+    }
+  
+    .floatDiv {
+      z-index: 3;
+    }
+    .ulDiv {
+      display: block;
+      position: absolute;
+      float: left;
+      z-index: 5;
+      left: -5px !important;
+    }
+    .spDiv ul {
+      right: -103px !important;
+    }
+    .spDiv ul:before {
+      right: 43px !important;
+      left: auto;
+    }
+  }
+
+  @media (max-width: 920px) {
+    .Area {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      ul {
+        width: auto !important;
+        margin-bottom: 5px !important;
+      }
+    }
+    .ulDiv {
+      width: 96% !important;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .floatDiv {
+      width: 100% !important;
+    }
+
+    .Area::-webkit-scrollbar {
+      position: fixed;
+      bottom: 10px;
+      top: 0px;
+      height: 3px;
+      background-color: #F5F5F5;
+    }
+    .Area::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+      background-color: #F5F5F5;
+    }
+    .Area::-webkit-scrollbar {
+      position: fixed;
+      bottom: 10px;
+      top: 0px;
+      height: 3px;
+      background-color: #F5F5F5;
+    }
+    .Area::-webkit-scrollbar-thumb {
+      background-color: #000000;
+      border: 0px solid #555555;
+    }
+  }
+
+
+  @media (max-width: 1076px) {
+    .div_inner_bottom_span_ul {
+      width: 100% !important;
+    }
+
+    .ulDiv {
+      width: 96% !important;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .floatDiv {
+      width: 100% !important;
+    }
+
+    .divList {
+      width: calc((100% - 98px) / 7) !important;
+    }
+  }
+
+  @media (max-width: 968px) {
+    .Area {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      ul {
+        width: auto !important;
+        margin-bottom: 5px !important;
+
+        li {
+          width: 130px;
+          span {
+            padding: 0 15px;
+          }
+        }
+
+        &:last-child {
+          width: 160px;
+        }
+      }
+      .divList {
+        width: calc((100% - 112px) / 6) !important;
+      }
+    }
+  }
+
+  @media (max-width: 840px) {
+    .divList {
+      width: calc((100% - 84px) / 6) !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .div_inner_bottom_span_ul {
+      width: 100% !important;
+    }
+
+    .ulDiv {
+      width: 96% !important;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .floatDiv {
+      width: 100% !important;
+    }
+    .divList {
+      width:  calc((100% - 42px) / 3) !important;
+    }
+  }
+
+  .Area {
+    position: relative;
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+#warehouse-page {
+  .o-lose, .o-win, .o-draw, .o-unknown {
+    color: #fff;
+    border-radius: 2px;
+    width: 17px;
+    display: inline-block;
+    line-height: 17px;
+    text-align: center;
+    margin: 0 2px;
+  }
+  .o-unknown {
+    background-color: #a5a4a4;
+  }
+  .o-draw {
+    background-color: $drawcolor !important;
+  }
+  .o-win {
+    background-color: $wincolor !important;
+  }
+  .o-lose {
+    background-color: $losecolor !important;
+  }
+
+  .home,
+  .guest {
+    position: relative;
+    width: 80%;
+    .play {
+      height: 70px;
+      margin-right: auto;
+      margin-left: auto;
+      display: table;
+      position: relative;
+      span {
+        vertical-align: middle;
+        display: table-cell;
+        cursor: pointer;
+        div {
+          text-align: center;
+          line-height: 20px;
+          display: block;
+          min-height: 20px;
+        }
+        .playerevent {
+          position: relative;
+          .number {
+            width: 38px;
+            height: 38px;
+            line-height: 38px !important;
+            color: $textcolor;
+            font-size: 12px;
+            text-align: center;
+            font-weight: normal;
+            border: 0;
+            border-radius: 0;
+            margin-bottom: 5px;
+            display: block;
+            position: static;
+            background: url(../../public/img/homeT.png) no-repeat center;
+            background-size: 100%;
+          }
+          img {
+            border-radius: 30px;
+            box-shadow: 0 0 10px #000;
+            height: 100%;
+          }
+          .events {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            .sr {
+              background: #ff0;
+              color: #000;
+              font-size: 12px;
+              line-height: 14px;
+              text-align: center;
+              font-style: normal;
+              padding: 0 4px;
+              border-radius: 20px;
+              display: inline-block;
+              width: auto;
+            }
+          }
+          .icon {
+            width: 15px;
+            position: absolute;
+          }
+          .LT {
+            top: 0;
+            left: 12px;
+          }
+          .LD {
+            bottom: 1px;
+            left: 12px;
+          }
+          .TL {
+            top: -15px;
+            left: 32%;
+          }
+          .TR {
+            top: 0;
+            right: 12%;
+          }
+          .RD {
+            top: -15px;
+            right: 32%;
+          }
+          .RB {
+            right: 0;
+            bottom: 3px;
+          }
+        }
+        .name {
+          background: #3a5c1b;
+          width: 95px;
+          height: 20px;
+          text-align: left;
+          color: #e7f1da;
+          line-height: 20px;
+          padding-right: 5px;
+          font-size: 12px;
+          float: none;
+          display: block;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          border-radius: 3px;
+          position: relative;
+          .number {
+            background-color: #e27a48;
+            left: 61px;
+            top: -4px;
+            font-weight: bold;
+            line-height: 22px;
+            display: inline-block;
+            width: 28px;
+            height: 28px;
+            vertical-align: top;
+            text-align: center;
+            margin-right: 5px;
+            position: absolute;
+            border-radius: 20px;
+            border: 2px solid #3c5d1a;
+          }
+          span {
+            width: 100%;
+            height: 20px;
+            text-align: center;
+            color: #e7f1da;
+            line-height: 20px;
+            padding-left: 5px;
+            overflow: hidden;
+            font-size: 13px;
+            display: block;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+  
+            a {
+              color: #e7f1da;
+            }
+          }
+        }
+      }
+      :hover {
+        ul {
+          display: block !important;
+        }
+        .name {
+          background: #ff5722;
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  #matchBox {
+    .playsTitle {
+      background-color: #226204;
+      color: #fff;
+      font-size: 16px;
+      line-height: 34px;
+      font-weight: bold;
+      text-align: center;
+    }
+    color: #fff;
+    margin: 0;
+    clear: both;
+    .playBox {
+      position: absolute;
+    }
+    .plays {
+      background: url(../../public/img/soccer-bg.png) center no-repeat #4e8521;
+      background-size: contain;
+      width: 100%;
+      height: 45.5vh;
+      display: flex;
+      justify-content: space-between;
+    }
+    ul {
+      position: absolute;
+      display: none;
+      background: #1f3508;
+      color: #d8d8d8;
+      left: 0;
+      top: 80px;
+      font-size: 12px;
+      padding: 30px;
+      border-radius: 5px;
+      z-index: 999;
+      padding-left: 95px;
+      width: 260px;
+      box-shadow: 0 28px 50px rgba(25, 24, 40, 0.35);
+      .icon {
+        float: left;
+        width: 75px;
+        height: 100px;
+        background: #e1e1e1;
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        margin-left: 0;
+        border: 3px solid #d8d8d8;
+        line-height: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      b {
+        color: #a7a7a7;
+        margin-right: 3px;
+        font-weight: normal;
+      }
+  
+      a {
+        color: #fff;
+      }
+    }
+    .backupPlay {
+      background-color: #41750d;
+      border: 3px solid #71a140;
+      border-top: 0;
+      height: auto;
+      display: flex;
+      .home,
+      .guest {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .play {
+          position: relative;
+          display: inline-block;
+          margin: 0 5px;
+          padding: 20px 0;
+          ul {
+            top: -120px;
+            left: 0;
+          }
+        }
+      }
+      .guest {
+        justify-content: flex-end;
+        .play {
+          ul {
+            top: -120px;
+            right: 0;
+            left: initial;
+          }
+        }
+      }
+    }
+    .shutup-btn {
+      background: #71a140;
+      border-radius: 0 0 5px 5px;
+      color: #fff;
+      margin: 0 auto;
+      text-align: center;
+      line-height: 24px;
+      width: 80px;
+      cursor: pointer;
+      .icon {
+        color: $textcolor;
+        font-size: 12px;
+        margin-left: 4px;
+        display: inline-block;
+      }
+    }
+    .linebackup {
+      width: 100%;
+      border-radius: 0;
+      background-color: #44751c;
+      border: 3px solid #71a140;
+      border-top: 0;
+    }
+    .on {
+      .icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  #icons {
+    line-height: 30px;
+    overflow: hidden;
+    padding: 10px;
+    color: #999;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    .icon {
+      text-align: left;
+      line-height: 24px;
+      margin-left: 5px;
+      white-space: nowrap;
+      width: 185px;
+      padding-right: 5px;
+      img {
+        margin-top: -3px;
+        margin-right: 5px;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  @media (min-width: 1080px) {
+    #matchBox {
+      .plays {
+          height: 430px;
+      } 
+      .backupPlay { 
+          min-height: 190px;
+      }
+  }
+}
+
+@media (max-width: 975px) { 
+  #matchBox {
+    position: relative;
+    background: #518a22;
+    .plays {
+        &:before {
+            content: '';
+            background: url(../../public/img/Footballpitch.png) center no-repeat;
+            transform: rotate(90deg);
+            width: auto;
+            height: auto;
+            background-size: contain;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            opacity: 0.5;
+            bottom: 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        background: transparent;
+        height: 640px;
+        max-height: none;
+        flex-direction: column;
+        display: flex;
+        max-width: none;
+        position: relative;
+        justify-content: center;
+        .home, .guest {
+            height: 60%;
+            width: 80%;
+            display: flex;
+            flex-direction: row-reverse;
+            margin-right: -30px;
+            margin-left: 0;
+            .playBox {
+                transform: rotate(-90deg);
+                width: auto;
+            }
+        }
+        .home {
+            transform: rotate(90deg);
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            span {
+                .playerevent {
+                    .number {
+                        background: #da6639;
+                        border-radius: 50%;
+                        display: none;
+                    }
+                    .events {
+                      
+                        .sr {
+                        }
+                    }
+                    .icon {
+                      position: initial;
+                    }
+                    .LT {
+                        left: -5px;
+                    }
+                    .LD {
+                        left: -5px;
+                    }
+                    .TL {
+                        top: 0px;
+                        left: 82%;
+                    }
+                }
+                .name {
+                    background: transparent;
+                    padding-right: 0;
+                    width: 90px;
+                    a {
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+        .guest {
+            transform: rotate(90deg);
+            top: -10px;
+            left: 11px;
+            right: 0;
+            margin: auto;
+            span {
+                .playerevent {
+                    .number {
+                        background: #3296d7;
+                        border-radius: 50%;
+                    }
+                    .events {
+                        .sr {
+                            display: none;
+                        }
+                    }
+                    .LT {
+                        left: -5px;
+                    }
+                    .LD {
+                        left: -5px;
+                    }
+                    .TL {
+                        top: 0px;
+                        left: 82%;
+                    }
+                }
+                .name {
+                    background: transparent;
+                    padding-right: 0;
+                    width: 50px;
+                    a {
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
+    ul {
+        display: none !important;
+    }
+}
+}
+
+@media (max-width: 768px) { 
+  #matchBox {
+    .plays {
+        &::before{       
+            max-width: 630px;
+        }
+        .home {
+            width: 80%;
+        }
+    }
+}
+}
+
+@media (max-width: 699px) {
+  #matchBox {
+    .plays {
+        height: 560px;
+        &::before{       
+            max-width: 630px;
+        }
+    }
+}
+}
+
+@media (max-width: 576px) {
+  #matchBox {
+    .plays {
+        .home, .guest {
+            width: 80%;
+        }
+    }
+    ul {
+        display: none !important;
+    }
+}
+}
+
+@media (max-width: 490px) {
+  #matchBox {
+    .plays {
+        .home, .guest {
+            width: 87%;
+        }
+    }
+    .backupPlay {
+        .home, .guest {
+            .play {
+                span {
+                    .name {
+                        width: 60px;
+                    }
+                }
+            }
+        }
+    }
+}
+}
+}
+

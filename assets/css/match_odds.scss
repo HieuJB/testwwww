@@ -1,0 +1,660 @@
+// @import '_colors.scss';
+
+.match-odds {
+    #odds-main {
+        padding: 10px;
+        border-radius: 4px;
+        background-color: #fff;
+        z-index: 2;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    .red, .o-down {
+        color: #d64444!important;
+    }
+    .o-up {
+        color: #008000;
+    }
+    .up2 {
+        background: url(../../public/img/greenUp.png) no-repeat 42px 11px;
+        display: block;
+        width: 50px;
+        margin: 0 auto;
+        color: #008000;
+    }
+    .down2 {
+        background: url(../../public/img/redDown.png) no-repeat 42px 11px;
+        display: block;
+        width: 50px;
+        margin: 0 auto;
+        color: #f00;
+    }
+    .company-comp {
+        table {
+            border: 1px solid #e5e5e5;
+            border-collapse: collapse;
+            .tr-title {
+                background: #efefef;
+                color: #222;
+                text-align: center;
+                line-height: 30px;
+                font-weight: bold;
+                th {
+                    border: 1px solid #e5e5e5;
+                    img {
+                        vertical-align: -4px;
+                        margin-left: 5px;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .bd-lr {
+                border-left: 1px solid #ddd;
+                border-right: 1px solid #ddd;
+            }
+            .bd-l {
+                border-left: 1px solid #ddd;
+            }
+            .bd-r {
+                border-right: 1px solid #ddd;
+            }
+        }
+        span {
+            padding: 5px 0;
+            display: block;
+        }
+        
+        .rankdata {
+            // span {
+            //     margin: 0 15px;
+            // }
+
+            // span.span2 {
+            //     margin: 0 30px;
+            // }
+        }
+        .odd_a {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+    
+    .modal-dialog {
+        .modal-header {
+            padding: 0 10px;
+            line-height: 40px;
+            height: 40px;
+            background-color: #f9f9f9;    
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+            .modal-title {
+                text-align: center;
+                font-size: 14px;
+                font-weight: bold;
+            }
+            .btn-close {
+                position: absolute;
+                right: 15px;
+                top: 12px;
+            }
+        }
+        .oddscomp-filterwin {
+            .popinfo {
+                padding: 0 0 10px;
+                margin: 0 auto;
+                align-items: center;
+                overflow: hidden;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                .complist {
+                    width: 31%;
+                    display: flex;
+                    align-items: center;
+                    padding: 10px;
+                    margin: 4px;
+                    color: #999;
+                    border: 1px solid #e5e5e5;
+                    border-radius: 2px;
+                    cursor: pointer;
+                    i {
+                        background: #999;
+                        width: 14px;
+                        height: 14px;
+                        border-radius: 50%;
+                        margin: 0 5px;
+                        vertical-align: -2px;
+                        display: inline-block;
+                        position: relative;
+                        &:after {
+                            content: "";
+                            width: 8px;
+                            height: 4px;
+                            border-left: 1px solid #fff;
+                            border-bottom: 1px solid #fff;
+                            transform: rotate(-45deg);
+                            display: inline-block;
+                            position: absolute;
+                            top: 3px;
+                            left: 2px;
+                        }
+                    }
+                }
+                :hover {
+                    background: #f5f5f5;
+                }
+                .on {
+                    border-color: $secondary;
+                    color: $primary;
+                    i {
+                        background: $primary;
+                    }
+                }
+            }
+            .tips {
+                background: #ffe8e8;
+                color: #d64444;
+                font-size: 12px;
+                text-align: center;
+                margin: 0 8px 0 8px;
+                padding: 6px;
+                border-radius: 4px;
+            }
+        }
+        .modal-footer {
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            .btn-primary {
+                background: $primary;
+                color: $textcolor;
+                font-size: 14px;
+                line-height: 34px;
+                height: 34px;
+                padding: 0 50px;
+                font-weight: bold;
+                text-align: center;
+                border-radius: 50px;
+                cursor: pointer;
+            }
+        }
+        .detail_win {
+            padding: 0;
+            min-height: 200px;
+            display: block;
+            margin: 0 auto;
+            align-items: center;
+            overflow: hidden;
+            .match-odds-menu {
+                margin: 0 3px;
+                position: relative;
+                height: 30px;
+                a {
+                    min-width: auto;
+                    padding: 0 10px;
+                    display: inline-block;
+                    padding: 0 5px;
+                    margin: 0 2px;
+                    height: 30px;
+                    line-height: 30px;
+                    min-width: 90px;
+                    text-align: center;
+                    font-weight: bold;
+                    border: 1px solid #e5e5e5;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    color: #333;
+                    text-decoration: none;
+                    &:hover {
+                        color: #f60;
+                    }
+                }
+                span.tab {
+                    min-width: auto;
+                    padding: 0 10px;
+                    display: inline-block;
+                    padding: 0 5px;
+                    margin: 0 2px;
+                    height: 30px;
+                    line-height: 30px;
+                    min-width: 90px;
+                    text-align: center;
+                    font-weight: bold;
+                    border: 1px solid #e5e5e5;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    color: #333;
+                    text-decoration: none;
+                    &:hover {
+                        color: #f60;
+                    }
+                }
+                .on {
+                    background-color: $primary !important;
+                    color: $textcolor;
+                    font-weight: 600;
+                }
+                a.on {
+                    color: $textcolor;
+                    &:hover {
+                        color: $textcolor;
+                    }
+                }
+                span.tab.on {
+                    color: $textcolor;
+                    &:hover {
+                        color: $textcolor;
+                    }
+                }
+                .tabsBox {
+                    float: right;
+                    min-width: 100px;
+                    overflow: hidden;
+                    border-radius: 4px;
+                    border: 1px solid #e5e5e5;
+                    .item {
+                        line-height: 26px;
+                        width: 50%;
+                        float: left;
+                        text-align: center;
+                        a {
+                            color: #333;
+                            border: 0;
+                            min-width: auto;
+                            &:hover {
+                                color: #f60;
+                            }
+                        }
+                        span.tab {
+                            color: #333;
+                            border: 0;
+                            min-width: auto;
+                            &:hover {
+                                color: #f60;
+                            }
+                        }
+                    }
+                    .on {
+                        background-color: $primary;
+                        a {
+                            color: $textcolor;
+                            &:hover {
+                                color: $textcolor;
+                            }
+                        }
+
+                        span.tab {
+                            color: $textcolor;
+                            &:hover {
+                                color: $textcolor;
+                            }
+                        }
+                    }
+                }
+            }
+            .detailtable {
+                max-height: 460px;
+                margin-top: 10px;
+                padding: 0 5px;
+                overflow: overlay;
+                .up2, .down2 {
+                    background-position-x: 40px;
+                    background-position-y: 6px;
+                }
+                .alllive, .handicapdetail, .doubledetail {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    width: 100%;
+                }
+                .ahdetail {
+                    display: flex;
+                    width: 100%;
+                    align-items: flex-start;
+                    @media (max-width: 768px) {
+                        align-items: flex-start;
+                        flex-direction: column;
+                    }
+                }
+                .team-table-other {
+                    line-height: 20px;
+                    .flexed {
+                        position: sticky;
+                        top: -1px;
+                        z-index: 1;
+                        background-color: #f9f9f9;
+                        border: 1px solid #d8d8d8;
+                    }
+                    th {
+                        color: #000;
+                        font-weight: normal;
+                        line-height: 24px;
+                        background-color: #eaeaea;
+                        border-bottom: 1px solid #d8d8d8;
+                        white-space: nowrap;
+                    }
+                    .flexed1 {
+                        position: sticky;
+                        top: 23px;
+                        z-index: 1;
+                        background-color: #f9f9f9;
+                    }
+                    .fb {
+                        animation: rotate 2s infinite;
+                    }
+                }
+                .threemix-table {
+                    border: 1px solid #e5e5e5;
+                    border-bottom: none;
+                    flex: 1;
+                    margin-right: 10px;
+                    background-color: #f9f9f9;
+                    &:nth-child(3) {
+                        margin-right: inherit;
+                    }
+                }
+                .alllive {
+                    .title {
+                        color: #333;
+                        font-size: 14px;
+                        font-weight: bold;
+                        line-height: 20px;
+                        margin: 10px 0 5px 0;
+                    }
+                    #bodanLive {
+                        span {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .no-bd-lr {
+        border-left: 0px;
+        border-right: 0px;
+    }
+    .red {
+        color: #d64444;
+    }
+    .down3 {
+        color: #ff0000;
+    }
+    .up3 {
+        color: #008000;
+    }.score_on {
+        background: #ffe99c;
+    }
+    @media (max-width: 920px) {
+        table#etable-header {
+          border-bottom: none;
+        }
+      }
+  
+      @media (max-width: 368px) {
+        table#etable-header {
+          border-bottom: 3px solid #f5f5f5
+        }
+    }
+    .eTable tr {
+        th.middle-width {
+            min-width: 70px
+        }
+    } 
+}
+
+.nav_select {
+    overflow: hidden;
+    padding: 5px 10px;
+    line-height: 20px;
+    background-color: $secondary;
+    .sbtn2 {
+        display: block;
+        float: left;
+        height: 23px;
+        padding: 0 7px;
+        margin-right: 5px;
+        background-color: #f8f8f8;
+        border-radius: 3px;
+        line-height: 23px;
+        color: #444;
+        cursor: pointer;
+        &:after {
+            display: inline-block;
+            vertical-align: -2px;
+            margin-left: 3px;
+            width: 0;
+            height: 0;
+            content: "";
+            border: 4px solid transparent;
+            border-top-color: #666;
+        }
+    }
+    .sbtn {
+        display: block;
+        float: left;
+        height: 23px;
+        width: 70px;
+        text-align: center;
+        line-height: 23px;
+        margin-right: 6px;
+        background-color: #f8f8f8;
+        border-radius: 3px;
+        color: #444;
+        cursor: pointer;
+        .sel {
+            position: relative;
+            min-width: 40px;
+            select {
+                position: absolute;
+                left: 0;
+                opacity: 0;
+                line-height: 20px;
+                padding: 2px;
+                cursor: pointer;
+            }
+            &:after {
+                position: absolute;
+                top: 10px;
+                right: -9px;
+            }
+        }
+    }
+}
+.oddDivBox {
+    background: #fff;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    z-index: 195;
+    .twin {
+        width: 146px;
+        border-top-width: 0px;
+        left: 38px;
+        top: 33.5px;
+        display: none;
+        background-color: #fff !important;
+        border: 1px solid #e5e5e5;
+        min-width: 280px;
+        position: absolute;
+        border-radius: 5px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, .5);
+        td {
+            line-height: 22px;
+            text-align: center;
+            padding: 5px 0;
+            border: 1px solid #e5e5e5;
+            a {
+                text-decoration: none;
+                color: #333;
+            }
+        }
+    }
+    .o_tr {
+        th {
+            background-color: #efefef;
+            color: #666;
+            border-bottom: 1px solid #ddd;
+            a {
+                color: #555;
+                text-align: left;
+                padding-left: 0;
+                padding-right: 10px;
+            }
+        }
+    }
+    .sd_f {
+        text-align: center;
+    }
+    .sd {
+        background-image: url(../../public/img/oddsup.png);
+        background-repeat: no-repeat;
+        background-position: right 2px;
+    }
+    #tab_MinMax {
+        line-height:22px;
+        td {
+            background-color: #e9f1e4;
+            .o_int, .o_int2 {
+                background-color: #fff;
+                width: 33px;
+                height: 14px;
+                border: 1px solid #aeb6bf;
+                font-size: 11px;
+            }
+            .hbtn {
+                background-color: #efefef;
+                color: #333;
+                height: 24px;
+                margin-right: 2px;
+                margin-left: 2px;
+                padding: 0 5px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+        }
+    }
+}
+.tcenter {
+    td {
+        padding: 5px 0;
+        text-align: center;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: #e5e5e5;
+    }
+    .flex {
+        justify-content: left;
+        display: flex !important;
+        align-items: center;
+        img {
+            margin: 0 5px;
+        }
+    }
+    .gbg {
+        background: #f5f5f5;
+    }
+    .tipsPre {
+        margin: 15px 0;
+        p {
+            margin-bottom: 0;
+        }
+    }
+}
+.tbg2 {
+    td {
+        background-color: #f5f5f5;
+    }
+}
+.f_odds {
+    th {
+        background: #e9f1e4;
+        color: #666;
+        line-height: 26px;
+        border-bottom: 1px solid #e5e5e5;
+        text-align: center;
+    }
+} 
+.oddfooterDiv {
+    width: 998px;
+    text-align: center;
+    bottom: 0;
+    position: fixed;
+    z-index: 300;
+}
+.twin {
+    position: absolute;
+    width: 244px;
+    z-index: 197;
+    left: 691px;
+    top: 601px;
+    background-color: #fff !important;
+    border-radius: 5px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .5);
+    min-width: 280px;
+    .hbg-td1 {
+        background-color: #fbfbcd !important;
+        line-height: 22px;
+        text-align: center;
+        padding: 5px 0;
+    }
+    .up2 {
+        background: url(../../public/img/greenUp.png) no-repeat 43px 8px;
+        display: block;
+        width: 50px;
+        margin: 0 auto;
+        color: #008000;
+    }
+    .down2 {
+        background: url(../../public/img/redDown.png) no-repeat 43px 8px;
+        display: block;
+        width: 50px;
+        margin: 0 auto;
+        color: #f00;
+    }
+    .tgs2 {
+        td {
+            line-height: 25px;
+            text-align: center;
+            padding: 5px 0;
+            border-bottom: 1px solid #e5e5e5;
+        }
+    }
+}
+.search_comp {
+    text-align: center;
+    margin-bottom: 10px;
+    .serachcom {
+        background-image: url(../../public/img/ss.png);
+        background-repeat: no-repeat;
+        background-position: right;
+        height: 26px;
+        border: 1px solid #ddd;
+        background-color: #fff;
+        padding: 0 20px 0 5px;
+    }
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.rb {
+    border-right: 1px solid #e5e5e5;
+}
+.lb {
+    border-left: 1px solid #e5e5e5;
+}
+.tb-bgcolor {
+    background: #f5f5f5
+}
+
+.tb-bgcolor1 {
+    background: #fff
+}
