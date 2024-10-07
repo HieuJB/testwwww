@@ -802,7 +802,7 @@ const fetchLanguages = async () => {
   }
 }
 
-await Promise.all([fetchConfig(), fetchLanguages(), fetchMenus()])
+await Promise.all([fetchConfig()])
 
 const cssVariable = getConfig('CSS_VARIABLE')
 if(cssVariable) {
